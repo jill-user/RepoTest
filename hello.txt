@@ -1,2 +1,38 @@
-hello world
-hello qt
+namespace翻译为命名空间，顾名思义，就是把一些类、变量、函数包含在一个空间中，在调用的时候使用作用域限定符号来调用，防止出现同名类、变量、函数无法分清的情况。也可以用来区分一个程序中各个模块的功能，类似于类。
+
+#include <iostream>
+using namespace std;  # 全局引入std命名空间，cout，endl等。
+
+namespace ns1{
+    int x = 1;
+}
+
+namespace ns2{
+    float x = 1.1;
+}
+
+int main(){
+    using namespace ns1;
+    cout << x << endl;
+    cout << ns2::x << endl;
+
+}
+用法
+
+namespace Utils
+{
+    //使用内联函数将string类型转换QString类型
+	inline QString stringtoQString(std::string s)
+	{
+		return QString::fromStdString(s);
+	}
+    //使用内联函数将string类型转换QString类型（并中文解码）
+    inline QString stringtoQString(std::string s)
+	{
+		return QString::fromLocal8Bit(s.c_str());//
+	}
+	
+
+    
+    
+}
