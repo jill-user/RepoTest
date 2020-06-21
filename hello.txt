@@ -31,8 +31,8 @@ namespace Utils
 	{
 		return QString::fromLocal8Bit(s.c_str());//
 	}
-	
-
-    
-    
 }
+
+
+
+第二个人添加内容
