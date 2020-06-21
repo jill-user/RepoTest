@@ -17,8 +17,7 @@ int main(){
     cout << ns2::x << endl;
 
 }
-用法例子
-
+用法
 namespace Utils
 {
     //使用内联函数将string类型转换QString类型
